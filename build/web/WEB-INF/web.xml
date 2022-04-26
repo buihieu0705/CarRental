@@ -24,6 +24,34 @@
         <servlet-name>ManageProfileForAdmin</servlet-name>
         <servlet-class>controller.ManageProfileForAdmin</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>AddCarController</servlet-name>
+        <servlet-class>controller.AddCarController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ManageCommentController</servlet-name>
+        <servlet-class>controller.ManageCommentController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ManageOrderForAdminController</servlet-name>
+        <servlet-class>controller.ManageOrderForAdminController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ManageProfileController</servlet-name>
+        <servlet-class>controller.ManageProfileController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ManageCarController</servlet-name>
+        <servlet-class>controller.ManageCarController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>GetCarDetailController</servlet-name>
+        <servlet-class>controller.GetCarDetailController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ManageOrderController</servlet-name>
+        <servlet-class>controller.ManageOrderController</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>SearchController</servlet-name>
         <url-pattern>/search</url-pattern>
@@ -47,6 +75,34 @@
     <servlet-mapping>
         <servlet-name>ManageProfileForAdmin</servlet-name>
         <url-pattern>/profileForAdmin</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AddCarController</servlet-name>
+        <url-pattern>/add</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ManageCommentController</servlet-name>
+        <url-pattern>/comment</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ManageOrderForAdminController</servlet-name>
+        <url-pattern>/orderForAdmin</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ManageProfileController</servlet-name>
+        <url-pattern>/profile</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ManageCarController</servlet-name>
+        <url-pattern>/manageCar</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>GetCarDetailController</servlet-name>
+        <url-pattern>/cardetail</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ManageOrderController</servlet-name>
+        <url-pattern>/order</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
