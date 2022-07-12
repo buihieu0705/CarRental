@@ -43,7 +43,7 @@
                 <%request.setAttribute("o", or);%>
                 <c:if test="${!fn:containsIgnoreCase(requestScope.o.status, 'rejectHidden')  && !fn:containsIgnoreCase(requestScope.o.status, 'completedHidden')&& !fn:containsIgnoreCase(requestScope.o.status, 'cancel')}">
                     <c:set var="i" value="1"/>
-                    <c:set var="href" value="author?action=veiwDetail&orderId=${requestScope.o.id}"/>
+                    <c:set var="href" value="author?action=viewDetail&orderId=${requestScope.o.id}"/>
                     <c:if test="${sessionScope.user.type == 3}">
                         <c:set var="href" value="orderForAdmin?action=edit&orderId=${requestScope.o.id}&page=booked"/>
                     </c:if>

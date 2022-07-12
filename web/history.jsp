@@ -123,7 +123,7 @@
                         <c:forEach items="${requestScope.listOrder}" var="o">
                             <c:if test="${fn:containsIgnoreCase(o.status, 'rejectHidden')  || fn:containsIgnoreCase(o.status, 'completedHidden')|| fn:containsIgnoreCase(o.status, 'cancel')}">
                                 <c:set var="i" value="1"/>
-                                <c:set var="href" value="author?action=veiwDetail&orderId=${o.id}"/>
+                                <c:set var="href" value="author?action=viewDetail&orderId=${o.id}"/>
                                 <c:if test="${sessionScope.user.type == 3}">
                                     <c:set var="href" value="orderForAdmin?action=edit&orderId=${o.id}&page=history"/>
                                 </c:if>

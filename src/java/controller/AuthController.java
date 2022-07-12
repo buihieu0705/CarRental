@@ -48,7 +48,7 @@ public class AuthController extends HttpServlet {
             request.setAttribute("error", "UNAUTHORIZED!");
             request.setAttribute("mess", "Please sign in to do");
             request.setAttribute("href", "login.jsp");
-            request.getRequestDispatcher("/pages/error.jsp").forward(request, response);
+            request.getRequestDispatcher("error.jsp").forward(request, response);
         } else {
             //1 - Renter
             if (a.getType() == 1) {
@@ -89,7 +89,7 @@ public class AuthController extends HttpServlet {
                         odb.updateStatus("Completed", Integer.parseInt(request.getParameter("orderId")));
                         request.getRequestDispatcher("booked.jsp").forward(request, response);
                         break;
-                    case "veiwDetail":
+                    case "viewDetail":
                         Order order1 = odb.getOrderById(Integer.parseInt(request.getParameter("orderId")));
                         request.setAttribute("order", order1);
                         request.getRequestDispatcher("bookedDetail.jsp").forward(request, response);
@@ -133,7 +133,7 @@ public class AuthController extends HttpServlet {
                         odb.updateStatus("CompletedHidden", Integer.parseInt(request.getParameter("orderId")));
                         request.getRequestDispatcher("booked.jsp").forward(request, response);
                         break;
-                    case "veiwDetail":
+                    case "viewDetail":
                         Order order = odb.getOrderById(Integer.parseInt(request.getParameter("orderId")));
                         request.setAttribute("order", order);
                         request.getRequestDispatcher("bookedDetail.jsp").forward(request, response);

@@ -3,24 +3,14 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/ADMIN/Documents/NetBeansProjects/RentalCar/src/java/controller/AuthController.java</file>
-            <file>file:/C:/Users/ADMIN/Documents/NetBeansProjects/RentalCar/web/cars.jsp</file>
-            <file>file:/C:/Users/ADMIN/Documents/NetBeansProjects/RentalCar/src/java/controller/ManageProfileForAdmin.java</file>
-            <file>file:/C:/Users/ADMIN/Documents/NetBeansProjects/RentalCar/src/java/dal/CarDAO.java</file>
-            <file>file:/C:/Users/ADMIN/Documents/NetBeansProjects/RentalCar/src/java/dal/AccountDAO.java</file>
-            <file>file:/C:/Users/ADMIN/Documents/NetBeansProjects/RentalCar/web/booked.jsp</file>
-            <file>file:/C:/Users/ADMIN/Documents/NetBeansProjects/RentalCar/web/header.jsp</file>
-            <file>file:/C:/Users/ADMIN/Documents/NetBeansProjects/RentalCar/src/java/controller/SearchController.java</file>
-            <file>file:/C:/Users/ADMIN/Documents/NetBeansProjects/RentalCar/web/nav.jsp</file>
-            <file>file:/C:/Users/ADMIN/Documents/NetBeansProjects/RentalCar/src/java/dal/DBContext.java</file>
-            <file>file:/C:/Users/ADMIN/Documents/NetBeansProjects/RentalCar/web/home.jsp</file>
-            <file>file:/C:/Users/ADMIN/Documents/NetBeansProjects/RentalCar/web/WEB-INF/web.xml</file>
-            <file>file:/C:/Users/ADMIN/Documents/NetBeansProjects/RentalCar/web/login.jsp</file>
-            <file>file:/C:/Users/ADMIN/Documents/NetBeansProjects/RentalCar/src/java/controller/RegisterController.java</file>
-            <file>file:/C:/Users/ADMIN/Documents/NetBeansProjects/RentalCar/src/java/dal/OrderDAO.java</file>
-            <file>file:/C:/Users/ADMIN/Documents/NetBeansProjects/RentalCar/web/manageProfile.jsp</file>
-            <file>file:/C:/Users/ADMIN/Documents/NetBeansProjects/RentalCar/web/error.jsp</file>
-            <file>file:/C:/Users/ADMIN/Documents/NetBeansProjects/RentalCar/web/profile.jsp</file>
+            <file>file:/C:/Users/ADMIN/Documents/GitHub/CarRental1/src/java/controller/GetCarDetailController.java</file>
+            <file>file:/C:/Users/ADMIN/Documents/GitHub/CarRental1/src/java/controller/LoginController.java</file>
+            <file>file:/C:/Users/ADMIN/Documents/GitHub/CarRental1/src/java/dal/CarDAO.java</file>
+            <file>file:/C:/Users/ADMIN/Documents/GitHub/CarRental1/src/java/controller/ManageCommentController.java</file>
+            <file>file:/C:/Users/ADMIN/Documents/GitHub/CarRental1/src/java/dal/CommentDAO.java</file>
+            <file>file:/C:/Users/ADMIN/Documents/GitHub/CarRental1/src/java/controller/SearchController.java</file>
+            <file>file:/C:/Users/ADMIN/Documents/GitHub/CarRental1/src/java/dal/DBContext.java</file>
+            <file>file:/C:/Users/ADMIN/Documents/GitHub/CarRental1/web/booking.jsp</file>
         </group>
     </open-files>
 </project-private>

@@ -33,7 +33,7 @@ import model.Image;
 
 public class ManageCarController extends HttpServlet {
 
-    public static final String SAVE_DIRECTORY = "assets/image";
+    public static final String SAVE_DIRECTORY = "image";
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>

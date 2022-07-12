@@ -12,7 +12,7 @@
         <title>Car Rental System</title>
         <link rel="icon" type="image/jpg" href="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Font_Awesome_5_regular_smile-wink.svg/768px-Font_Awesome_5_regular_smile-wink.svg.png">
         <link rel='stylesheet' href='css/style.css' type='text/css' media='all' />
-                <link rel='stylesheet' href='css/leftalignmenu.css' type='text/css' media='all' />
+        <link rel='stylesheet' href='css/leftalignmenu.css' type='text/css' media='all' />
         <link rel='stylesheet' href='css/kirki.css' type='text/css' media='all' />
         <script src="https://kit.fontawesome.com/ec811f6ffe.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -85,9 +85,7 @@
                                     Role: 
                                     <select name="type">
                                         <option value="render">Renter</option>
-                                        <option value="jobber">Jobber</option>
                                     </select>
-                                    <i class="fas fa-chevron-down"></i>
                                 </div>
                                 <br>
                                 <input type="submit" value="Sign up"style="background-color: #04DBC0; color: #fff;"/>

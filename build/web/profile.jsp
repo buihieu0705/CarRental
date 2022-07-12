@@ -22,6 +22,7 @@
             <% request.setAttribute("href", "login.jsp");%>
             <% request.getRequestDispatcher("error.jsp").forward(request, response);%>
         </c:if>
+        
         <div id="wrapper" class="hasbg transparent">
             <div class="header_style_wrapper" id="menu">
                 <div class="above_top_bar" id="top_bar">
@@ -161,38 +162,26 @@
                             <h2  style="color: red; text-align: center;">${requestScope.error}</h2>     
                             <form action="profileForAdmin?action=save&username=${requestScope.account.username}" method="POST">
                                 Fullname:<br>
-                                <input type="text" name="newFullName" size="90%" value="${requestScope.account.fullname}" required><br><br>
+                                <input type="text" name="newFullName" size="90%" value="${requestScope.account.fullname}" required readonly><br><br>
                                 Email:<br>  
-                                <input type="text" size="90%" name="newEmail" value="${requestScope.account.email}" required><br><br>    
+                                <input type="text" size="90%" name="newEmail" value="${requestScope.account.email}" required readonly><br><br>    
                                 Address:<br>  
-                                <input type="text" size="90%" name="newAddress" value="${requestScope.account.address}" required><br><br>    
+                                <input type="text" size="90%" name="newAddress" value="${requestScope.account.address}" required readonly><br><br>    
                                 City:<br>  
-                                <input type="text" size="90%" name="newCity" value="${requestScope.account.city}" required><br><br>    
+                                <input type="text" size="90%" name="newCity" value="${requestScope.account.city}" required readonly><br><br>    
                                 Phone number:<br>
-                                <input type="text" size="90%" name="newPhone" value="${requestScope.account.phone}" required><br><br>
-                                Status<br/>
+                                <input type="text" size="90%" name="newPhone" value="${requestScope.account.phone}" required readonly><br><br>
+                                Role<br/>
                                 <select name="type">
                                     <%Account acc = (Account) request.getAttribute("account"); %>
                                     <option value="1" <%= acc.getType() == 1 ? "selected" : ""%>>Renter</option>
                                     <option value="2" <%= acc.getType() == 2 ? "selected" : ""%>>Jobber</option>
-                                </select>
-                                <br>
-                                <span style="color: blue">Change password</span> 
-                                <input id="checkbox_changepassword" type="checkbox" name="changePassword" value="1" onchange= "changePassFunction()">
-                                <div id="change_password">
-                                    <br/>
-                                    <label style="width: 30%" for="">Current password: </label> 
-                                    <input type="password" name="oldPassword" size="50%" id="oldPassword"><br>
-                                    <label style="width: 30%" for="">New password: </label> 
-                                    <input type="password" name="newPassword" size="50%" id="newPassword"><br>
-                                    <label style="width: 30%" for="">Re-enter new password:</label> 
-                                    <input type="password" name="reNewPassword" size="50%" id="reNewPassword"><br>
-                                </div>
+                                </select>   
+                                <i class="fas fa-chevron-down"></i>
                                 <br/><br/>
                                 <input type="submit" value="Save" style="width: 200px;"/>
                                 <p style="color: red;">${requestScope.error}</p>
                             </form>
-                            <button class="button" style="width: 200px;"><a href="profileForAdmin?action=delete&username=${requestScope.account.username}" style="color: #fff;">Delete</a></button>
                         </div>
                         <br>
                     </div>            

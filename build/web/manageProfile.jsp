@@ -17,50 +17,55 @@
     </head>
 
     <body>
-    <c:if test="${requestScope.listAccount == null}">
-        <% request.setAttribute("error", "Not found any car!");%>
-        <% request.setAttribute("mess", "Go to home");%>
-        <% request.setAttribute("href", "home.jsp");%>
-        <% request.getRequestDispatcher("error.jsp").forward(request, response);%>
-    </c:if>
-    <div id="wrapper" class="hasbg transparent">
-        <%@include file="nav.jsp" %>
-        <% List<Account> list = (List<Account>) request.getAttribute("listAccount");%>
-        <div class="standard_wrapper sidebar_content gallery classic two_cols" style="margin-top: 100px;" >
-            <c:if test="${requestScope.listAccount != null}">
-                <c:forEach items="${requestScope.listAccount}" var="c">
-                    <div class="element portfolio_type">
-                        <a  href="profileForAdmin?action=edit&username=${c.username}">
-                            <img src="image/profile.png" style="height: 346.29px;"/>
-                        </a>
-                        <hr>
-                        <div class="portfolio_info_wrapper">
-                            <i class="fas fa-file-signature fa-2x"></i>
-                            <span style="font-size: 30px;">${c.fullname}</span>
-                            <br><br>
-                            <i class="fas fa-user fa-2x"></i>
-                            <span style="font-size: 30px;">${c.username}</span>
-                            <div class="car_attribute_price" >
-                                <div class="car_attribute_price_day">
-                                    <span class="single_car_price" style="font-size: 30px;border: 1px black dotted; ">
-                                        <c:if test="${c.type == 1}">
-                                            <i>Renter</i>
-                                        </c:if>
-                                        <c:if test="${c.type == 2}">
-                                            <i>Jobber</i>
-                                        </c:if>
-                                    </span><br>
+        <c:if test="${requestScope.listAccount == null}">
+            <% request.setAttribute("error", "Not found any account!");%>
+            <% request.setAttribute("mess", "Go to home");%>
+            <% request.setAttribute("href", "home.jsp");%>
+            <% request.getRequestDispatcher("error.jsp").forward(request, response);%>
+        </c:if>
+        <c:if test="${sessionScope.user.type != 3}">
+            <% request.setAttribute("error", "UNAUTHORIZED!");%>
+            <% request.setAttribute("mess", "Sign in to admin account");%>
+            <% request.setAttribute("href", "login.jsp");%>
+            <% request.getRequestDispatcher("error.jsp").forward(request, response);%>                   
+        </c:if>
+        <div id="wrapper" class="hasbg transparent">
+            <%@include file="nav.jsp" %>
+            <% List<Account> list = (List<Account>) request.getAttribute("listAccount");%>
+            <div class="standard_wrapper sidebar_content gallery classic two_cols" style="margin-top: 100px;" >
+                <c:if test="${requestScope.listAccount != null}">
+                    <c:forEach items="${requestScope.listAccount}" var="c">
+                        <div class="element portfolio_type">
+                            <a  href="profileForAdmin?action=edit&username=${c.username}">
+                                <img src="image/profile.png" style="height: 346.29px;"/>
+                            </a>
+                            <hr>
+                            <div class="portfolio_info_wrapper">
+                                <i class="fas fa-file-signature fa-2x"></i>
+                                <span style="font-size: 30px;">${c.fullname}</span>
+                                <br><br>
+                                <i class="fas fa-user fa-2x"></i>
+                                <span style="font-size: 30px;">${c.username}</span>
+                                <div class="car_attribute_price" >
+                                    <div class="car_attribute_price_day">
+                                        <span class="single_car_price" style="font-size: 30px;border: 1px black dotted; ">
+                                            <c:if test="${c.type == 1}">
+                                                <i>Renter</i>
+                                            </c:if>
+                                            <c:if test="${c.type == 2}">
+                                                <i>Jobber</i>
+                                            </c:if>
+                                        </span><br>
+                                    </div>
                                 </div>
                             </div>
+                            <button class="button" style="width: 450px; margin: 10px; "><a href="profileForAdmin?action=edit&username=${c.username}" style="color: #fff;">View/ Change Role</a></button>
                         </div>
-                        <button class="button" style="width: 200px; margin: 10px; "><a href="profileForAdmin?action=edit&username=${c.username}" style="color: #fff;">Edit</a></button>
-                        <button class="button" style="width: 200px; margin: 10px; "><a href="profileForAdmin?action=delete&username=${c.username}" style="color: #fff;">Delete</a></button>
-                    </div>
-                </c:forEach>
-            </c:if>
+                    </c:forEach>
+                </c:if>
+            </div>
+            <%@include file="footer.jsp" %>
         </div>
-        <%@include file="footer.jsp" %>
     </div>
-</div>
 </body>
 </html>
